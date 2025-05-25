@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MovieCard = ({movie :{title, Vote_average, poster_path, release_date, original_language }}) => {
+const MovieCard = ({movie :{title, vote_average, poster_path, release_date, original_language }}) => {
   return (
     <div className="movie-card">
         <img src={poster_path ?
@@ -8,9 +8,9 @@ const MovieCard = ({movie :{title, Vote_average, poster_path, release_date, orig
         <div className="mt-4">
             <h3>{title}</h3>
             <div className="content">
-                <div>
+                <div className='rating'>
                     <img src="star.svg" alt="Star Icon" />
-                    <p>{Vote_average ? Vote_average.toFixed(1) : '' }</p>
+                    <p>{vote_average ? vote_average.toFixed(1) : '' }</p>
                 </div>
                 <span>•</span>
                 <p className='lang'>{original_language}</p>
